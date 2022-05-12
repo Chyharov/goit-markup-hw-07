@@ -53,7 +53,7 @@
     <main>
         <section class="section">
             <div class="container">
-                    <ul class="site-btn list">
+                    <ul class="site-btn">
                         <li class="btn-item"><button type="button" class="button-portfolio">Все</button></li>
                         <li class="btn-item"><button type="button" class="button-portfolio">Веб-сайты</button></li>
                         <li class="btn-item"><button type="button" class="button-portfolio">Приложения</button></li>
@@ -214,65 +214,75 @@
 
     <!-- Подвал -->
     <footer class="footer">
-        <div class="container">
-            <div class="block-address">
-                <a href="./index.html" class="logo">Web<span class="logo-white">Studio</span></a>
+        <div class="footer__container">
+            <div class="section__address">
+                <a href="./index.html" class="logo">Web<span class="footer__logo">Studio</span></a>
     
-                <address>
-                    <ul class="list">
-                        <li class="footer-margin">
-                            <a class="footer-link" href="https://goo.gl/maps/Q5THsui5SATpn1R8A" target="_blank"
-                                rel="noopener noreferrer">
+                <address class="address">
+                    <ul class="address__list">
+                        <li class="address__item">
+                            <a class="address__link" href="https://goo.gl/maps/Q5THsui5SATpn1R8A" target="_blank" rel="noopener noreferrer">
                                 г. Киев, пр-т Леси Украинки, 26
                             </a>
                         </li>
-                        <li class="footer-margin">
-                            <a href="mailto:info@devstudio.com" class="footer-link-grey">
+                        <li class="address__item">
+                            <a href="mailto:info@devstudio.com" class="footer__contact">
                                 info@devstudio.com
                             </a>
                         </li>
-                        <li class="footer-margin">
-                            <a href="tel:+380961111111" class="footer-link-grey">
+                        <li class="address__item">
+                            <a href="tel:+380961111111" class="footer__contact">
                                 +38 096 111 11 11
                             </a>
                         </li>
                     </ul>
                 </address>
             </div>
-            <div class="block-follow">
-                <h2 class="follow-title">присоединяйтесь</h2>
-                <ul class="social-footer-list">
-                    <li class="footer-icon-social">
-                        <a href="" class="footer-social-link">
-                            <svg width="20" height="20" class="icon-footer" aria-label="Instagram">
+            <div class="section__follow">
+                <h3 class="follow__title">присоединяйтесь</h3>
+                <ul class="follow__list">
+                    <li class="follow__item">
+                        <a href="" class="follow__link">
+                            <svg width="20" height="20" class="follow__icon" aria-label="Instagram">
                                 <use href="./images/sprite.svg#icon-instagram"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-icon-social">
-                        <a href="" class="footer-social-link">
-                            <svg width="20" height="20" class="icon-footer" aria-label="Twitter">
+                    <li class="follow__item">
+                        <a href="" class="follow__link">
+                            <svg width="20" height="20" class="follow__icon" aria-label="Twitter">
                                 <use href="./images/sprite.svg#icon-twitter"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-icon-social">
-                        <a href="" class="footer-social-link">
-                            <svg width="20" height="20" class="icon-footer" aria-label="Facebook">
+                    <li class="follow__item">
+                        <a href="" class="follow__link">
+                            <svg width="20" height="20" class="follow__icon" aria-label="Facebook">
                                 <use href="./images/sprite.svg#icon-facebook"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-icon-social">
-                        <a href="" class="footer-social-link">
-                            <svg width="20" height="20" class="icon-footer" aria-label="Linkedin">
+                    <li class="follow__item">
+                        <a href="" class="follow__link">
+                            <svg width="20" height="20" class="follow__icon" aria-label="Linkedin">
                                 <use href="./images/sprite.svg#icon-linkedin"></use>
                             </svg>
                         </a>
                     </li>
                 </ul>
             </div>
-        </div>
+                <form class="form__subscribe">
+                    <label class="label__subscribe">
+                        <p class="title__subscribe">Подпишитесь на рассылку</p>
+                        <input type="email" name="mail" id="mail__subscriber" placeholder="E-mail" class="input__mail" />
+                    </label>
+                    <button type="submit" class="button__subscribe">
+                        Подписаться
+                        <svg width="24" height="24" class="icon__subscribe">
+                            <use href="./images/sprite.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
     </footer>
 </body>
 </html>
