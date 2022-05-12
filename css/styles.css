@@ -57,9 +57,27 @@ p {
   margin: 0;
 }
 
+/* Секции  */
+.section {
+  Padding-top: 94px;
+  Padding-bottom: 94px;
+}
+
+/* Контейнеры */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* background-color: teal;
+  outline: 2px solid red; */
+}
+
 /* Спрятать / Скрыть текст */
 
-.visually-hidden {
+.visually__hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -72,6 +90,17 @@ p {
   overflow: hidden;
 }
 
+/* Удаление последних отступов у списков */
+
+.teamlist__item:not(:last-child),
+.company__item:not(:last-child),
+.icon-clients-list:not(:last-child),
+.feature__item:not(:last-child),
+.icon-clients-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+
 /* Head */
 
 header {
@@ -82,7 +111,7 @@ header {
   border-bottom: 1px solid #EEEEEE;
 }
 
-.icon-header {
+.header__icon {
   text-align: center;
   align-items: center;
   fill: currentColor;
@@ -90,12 +119,7 @@ header {
   margin-right: 10px;
 }
 
-.header-contact-link:hover,
-.header-contact-link:focus {
-  color: var(--accent-color);
-}
-
-.header-contact-link {
+.header__contact {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -112,8 +136,10 @@ header {
   transition: var(--transition-hover-focus);
 }
 
-
-
+.header__contact:hover,
+.header__contact:focus {
+  color: var(--accent-color);
+}
 
 .contacts-nav {
   color: var(--primary-text-color);
@@ -140,94 +166,34 @@ header {
   text-decoration: none;
 }
 
-.logo-black {
+.header__logo {
   color: var(--primary-text-color);
-}
-
-.logo-white {
-  color: var(--primary-white-color);
-}
-
-.section {
-  Padding-top: 94px;
-  Padding-bottom: 94px;
-}
-
-/* Контейнеры */
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  /* background-color: teal;
-  outline: 2px solid tomato; */
-}
-
-.list,
-.feature-list,
-.cards {
-  list-style: none;
-}
-
-.about-company-list,
-.about-comand-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  padding: 0px;
-}
-
-.about-company-list-item {
-  z-index: -94;
-  display: flex;
-  align-items: flex-end;
-  position: relative;
-}
-
-.about-company-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-/* навигация сайта */
-
-button {
-  font-family: inherit;
 }
 
 /* Main nav */
 
-.main-nav {
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.site-nav {
+.navigation {
   display: flex;
+  align-items: center;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
 
-/* .site-nav .item {
-  background-color:tomato
-} */
-
-/* .site-nav .item:not(:last-child) {
-  margin-right: 50px;
-} - более современный */
-
-.site-nav .item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-/* .footer-icon-social:not(:last-child) {
-  margin-right: 10px;
-} */
-
-.site-nav .link {
-  position: relative;
+.nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -244,25 +210,24 @@ button {
   transition: var(--transition-hover-focus);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.curred {
+.link__curred {
   color: var(--accent-color);
 
 }
 
-.curred::after {
-  position: absolute;
+.link__curred::after {
   display: block;
   content: '';
   height: 4px;
   width: 100%;
   background-color: var(--accent-color);
   border-radius: 2px;
-  transform: translateY(29px);
+  transform: translateY(27px);
 }
 
 /* Hero */
@@ -285,11 +250,7 @@ button {
   margin-right: auto;
 }
 
-img {
-  display: block;
-}
-
-.hero-title {
+.hero__title {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -304,13 +265,81 @@ img {
   text-transform: uppercase;
 }
 
-
-.section.no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
+.hero__button {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: 10px;
+  border-radius: 4px;
+  padding: 10px 32px;
 }
 
-.section-title {
+img {
+  display: block;
+}
+
+/* Features */
+
+.feature__section {
+  Padding-top: 94px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--title-text-color);
+  font-size: 14px;
+  line-height: 1.71;
+  padding: 0;
+  list-style: none;
+}
+
+.feature__item {
+  width: calc((100% - 90px) / 4);
+  /* background-color: tomato; */
+}
+
+.feature__title {
+  color: var(--primary-text-color);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.feature__description {
+  color: var(--title-text-color);
+  font-size: 14px;
+  line-height: 1.71;
+  
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.features__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-color-section);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+/* <!-- Про компанию --> */
+
+.company__section {
+  Padding-top: 94px;
+  Padding-bottom: 94px;
+}
+
+.section__title {
   margin-bottom: 50px;
   margin-top: 0px;
   color: var(--primary-text-color);
@@ -320,24 +349,78 @@ img {
   text-align: center;
 }
 
+.company__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0px;
+}
 
-.feature-title {
-  color: var(--primary-text-color);
-  margin: 0;
+.company__item {
+  z-index: -94;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.company__description {
+  padding: 27px;
+  position: absolute;
+  width: 370px;
+  background-color: rgba(47, 48, 058, 0.8);
+  text-align: center;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: var(--primary-white-color)
 }
 
 /* Team */
 
-.section-team {
+.team__section {
   Padding-top: 94px;
   Padding-bottom: 94px;
   background-color: var(--background-color-section);
 }
 
-.name {
+.section__title {
+  margin-bottom: 50px;
+  margin-top: 0px;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.team__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0px;
+}
+
+.teamlist__item {
+  background-color: var(--primary-white-color);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.teamlist__inner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.teamlist__name {
   text-align: center;
   color: var(--primary-text-color);
   font-weight: 500;
@@ -346,7 +429,7 @@ img {
   margin-bottom: 10px;
 }
 
-.proffesion {
+.teamlist__prof {
   text-align: center;
   color: var(--title-text-color);
   font-size: 16px;
@@ -355,37 +438,17 @@ img {
   margin-bottom: 16px;
 }
 
-.team-card {
-  background-color: var(--primary-white-color);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-
-}
-
-.team-card-text {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.team-card:not(:last-child) {
-  margin-right: 30px;
-}
-
-.social-list-team {
+.teamlist__soc {
   display: flex;
   justify-content: center;
 }
 
-.icon-social-team:not(:last-child) {
+.soclist__item:not(:last-child) {
   margin-right: 10px;
 }
 
 
-.social-team-link {
+.soclist__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,40 +460,24 @@ img {
   transition: var(--transition-hover-focus);
 }
 
-.icon-team {
-  fill: currentColor;
-}
-
-.social-team-link:hover,
-.social-team-link:focus {
+.soclist__link:hover,
+.soclist__link:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
 
-/* Clients */
-
-.clients-title {
-  color: var(--primary-text-color);
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-align: center;
-  margin-bottom: 50px;
+.soclist__icon {
+  fill: currentColor;
 }
+
+
+/* Clients */
 
 .clients-list {
   display: flex;
   justify-content: center;
   text-decoration: none;
 }
-
-.icon-clients-list:not(:last-child) {
-  margin-right: 30px;
-}
-
-/* .icon-clients-lis:not(:last-child) {
-  margin-left: 30px;
-} - не работает? */
 
 .icon-clients-link {
   display: flex;
@@ -454,67 +501,10 @@ img {
   color: var(--accent-color);
 }
 
-/* Features */
-
-.section-feature-list {
-  Padding-top: 94px;
-}
-
-.features-list .title {
-  color: var(--title-text-color);
-  font-size: 14px;
-  line-height: 1.14;
-}
-
-.text {
-  color: var(--title-text-color);
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-.feature-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--title-text-color);
-  font-size: 14px;
-  line-height: 1.71;
-  padding: 0;
-}
-
-.feature-list p {
-  padding-top: 10px;
-  padding-bottom: 0px;
-}
-
-.centered {
-  text-align: center;
-}
-
-.icon-features {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 270px;
-  height: 120px;
-  background-color: var(--background-color-section);
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-
 /* Buttons */
 
-.button.primary {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  border: 10px;
-  border-radius: 4px;
-  padding: 10px 32px;
+button {
+  font-family: inherit;
 }
 
 .button-portfolio {
@@ -805,6 +795,7 @@ address {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .flex-element {
@@ -825,30 +816,6 @@ address {
 
 .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
-}
-
-/* .flex-element {
-  background-color:tomato;
-  width: 370px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.flex-element:nth-child(3n) {
-  margin-right: 0;
-}
-
-.flex-element:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-} - ЗНАЧЕНИЕ В ПИКСЕЛЯХ  */
-
-.flex-elemet-studio {
-  width: calc((100% - 90px) / 4);
-  /* background-color: tomato; */
-}
-
-.flex-elemet-studio:not(:last-child) {
-  margin-right: 30px;
 }
 
 .box {
@@ -894,20 +861,7 @@ address {
   color: var(--primary-text-color);
 }
 
-.about-images-company {
-  padding: 27px;
-  position: absolute;
-  width: 370px;
-  background-color: rgba(47, 48, 058, 0.8);
-  text-align: center;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--primary-white-color)
-}
+
 
 /* MODAL WINDOW */
 
