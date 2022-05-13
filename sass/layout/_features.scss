@@ -18,6 +18,10 @@
   /* background-color: tomato; */
 }
 
+.feature__item:not(:last-child){
+  margin-right: 30px;
+}
+
 .feature__title {
   color: var(--primary-text-color);
   margin: 0;

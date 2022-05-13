@@ -27,6 +27,11 @@
     align-items: flex-end;
     position: relative;
   }
+
+  .company__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
   
   .company__description {
     padding: 27px;
