@@ -1,30 +1,19 @@
 .card__overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: 63px;
-    padding-right: 24px;
-    padding-bottom: 63px;
-    padding-left: 24px;
-    background-color: var(--accent-color);
-    transform: translatey(100%);
-    transition: var(--transition-overlay);
-  }
-  
-  .card__overlay>p {
-    color: var(--primary-white-color);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .card__overlay:focus,
-  .card__overlay:hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  background-color: var(--accent-color);
+  transform: translatey(100%);
+  transition: var(--transition-overlay);
+
+  &:focus,
+  &:hover {
     display: flex;
     align-items: center;
     position: absolute;
@@ -36,3 +25,14 @@
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(0%);
   }
+}
+
+.card__overlay > p {
+  color: var(--primary-white-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  margin: 0;
+  font-size: 18px;
+}

@@ -12,12 +12,12 @@
   background-color: transparent;
   border-radius: 50%;
   transition: var(--transition-hover-focus);
-}
 
-.soclist__link:hover,
-.soclist__link:focus {
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+  }
 }
 
 .soclist__icon {
@@ -46,14 +46,13 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .follow__icon {
   fill: currentColor;
-}
-
-
-.follow__link:hover,
-.follow__link:focus {
-  background-color: var(--accent-color);
 }

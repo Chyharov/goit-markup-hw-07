@@ -1,57 +1,57 @@
 .footer {
-  background-color: #2F303A;
+  background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-}
 
-.footer__container {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  &__container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__contact {
+    color: rgba(255, 255, 255, 0.6);
+  
+    font-style: normal;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+  
+    transition: var(--transition-hover-focus);
+  
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
 }
 
 .address {
   margin-top: 20px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    color: var(--primary-white-color);
+    font-style: normal;
+    text-decoration: none;
+    transition: var(--transition-hover-focus);
+  
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
 }
 
 .section__address {
   margin-right: 70px;
-}
-
-.address__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.address__link {
-  color: var(--primary-white-color);
-  font-style: normal;
-  text-decoration: none;
-  transition: var(--transition-hover-focus);
-}
-
-.address__link:focus,
-.address__link:hover {
-  color: var(--accent-color);
-}
-
-.footer__contact {
-  color: rgba(255, 255, 255, 0.6);
-
-  font-style: normal;
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  line-height: 1.71;
-  text-decoration: none;
-
-  transition: var(--transition-hover-focus);
-}
-
-.footer__contact:focus,
-.footer__contact:hover {
-  color: var(--accent-color);
 }
 
 .section__follow {
@@ -97,7 +97,6 @@
 .follow__icon {
   fill: currentColor;
 }
-
 
 .follow__link:hover,
 .follow__link:focus {
@@ -180,9 +179,9 @@
   margin-left: 12px;
 
   transition: background-color var(--transition), box-shadow var(--transition);
-}
 
-.button__subscribe:hover {
-  background-color: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
