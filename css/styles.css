@@ -2,16 +2,6 @@
 /* вторичный цвет #757575 */
 /* акцент #2196F3 */
 /* основной цвет фона #fffff */
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  /* box-sizing: inherit; */
-  box-sizing: border-box;
-}
 
 :root {
   --primary-text-color: #212121;
@@ -57,6 +47,10 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
 /* Секции  */
 .section {
   Padding-top: 94px;
@@ -99,10 +93,6 @@ p {
   margin-right: 30px;
 }
 
-img {
-  display: block;
-}
-
 /* Голова */
 
 .header {
@@ -111,6 +101,12 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   border-bottom: 1px solid #EEEEEE;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__icon {
@@ -167,12 +163,6 @@ img {
 
 /* Навигация */
 
-.header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -210,12 +200,12 @@ img {
   color: var(--accent-color);
 }
 
-.link__curred {
+.navlink__curred {
   color: var(--accent-color);
 
 }
 
-.link__curred::after {
+.navlink__curred::after {
   display: block;
   content: '';
   height: 4px;
@@ -680,7 +670,6 @@ button {
   color: rgba(255, 255, 255, 0.6);
 }
 
-
 .icon__subscribe {
   margin-left: 10px;
 }
@@ -895,7 +884,6 @@ button {
 .modal-button:focus {
   color: currentColor;
 }
-
 
 .button-close {
   position: absolute;
